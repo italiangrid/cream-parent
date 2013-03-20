@@ -97,7 +97,7 @@
 
           <dependency>
             <groupId>log4j</groupId>
-            <artifactId>logj4</artifactId>
+            <artifactId>log4j</artifactId>
             <version>1.2.16</version>
             <scope>compile</scope>
           </dependency>
@@ -188,7 +188,7 @@
 
           <dependency>
             <groupId>log4j</groupId>
-            <artifactId>logj4</artifactId>
+            <artifactId>log4j</artifactId>
             <version>1.2.13</version>
             <scope>compile</scope>
           </dependency>
@@ -279,7 +279,7 @@
 
           <dependency>
             <groupId>log4j</groupId>
-            <artifactId>logj4</artifactId>
+            <artifactId>log4j</artifactId>
             <version>1.2.14</version>
             <scope>compile</scope>
           </dependency>
@@ -346,4 +346,14 @@
     </profile>
     
   </profiles>
+  
+  
+  <distributionManagement>
+    <repository>
+      <id>igi.website</id>
+      <name>IGI Website</name>
+      <url>${igi.repo.url}</url>
+    </repository>
+  </distributionManagement>
+
 </project>
