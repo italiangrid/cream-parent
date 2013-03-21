@@ -34,7 +34,7 @@
       <dependency>
         <groupId>eu.eu-emi.security</groupId>
         <artifactId>canl-java-axis2</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.1.3</version>
         <scope>compile</scope>
       </dependency>
 
@@ -66,7 +66,8 @@
   
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     
-    <wsdls.path>https://ci-01.cnaf.infn.it/download/cream/cream-ce-wsdl</wsdls.path>
+    <cream.wsdl.url>http://gimo2.pd.infn.it/WS/CREAM</cream.wsdl.url>
+    <es.wsdl.url>http://gimo2.pd.infn.it/WS/ES</es.wsdl.url>
     
   </properties>
   
