@@ -4,7 +4,7 @@
 
   <groupId>org.glite</groupId>
   <artifactId>cream-parent</artifactId>
-  <version>1.0.0</version>
+  <version>0.1.0</version>
   <packaging>pom</packaging>
   
   <organization>
@@ -25,37 +25,44 @@
     <dependencies>
 
       <dependency>
-        <groupId>eu.eu-emi.security</groupId>
-        <artifactId>canl</artifactId>
-        <version>1.1.0</version>
+        <groupId>org.glite.security</groupId>
+        <artifactId>trustmanager</artifactId>
+        <version>3.1.4</version>
         <scope>compile</scope>
       </dependency>
 
       <dependency>
-        <groupId>eu.eu-emi.security</groupId>
-        <artifactId>canl-java-axis2</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>org.glite.security</groupId>
+        <artifactId>trustmanager-axis2</artifactId>
+        <version>1.0.1</version>
+        <scope>compile</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.glite.security</groupId>
+        <artifactId>delegation-java</artifactId>
+        <version>2.2.0</version>
         <scope>compile</scope>
       </dependency>
 
       <dependency>
         <groupId>org.italiangrid</groupId>
         <artifactId>voms-api-java</artifactId>
-        <version>3.0.0</version>
+        <version>2.0.10</version>
         <scope>compile</scope>
       </dependency>
 
       <dependency>
         <groupId>org.glite.authz</groupId>
         <artifactId>pep-common</artifactId>
-        <version>2.3.0</version>
+        <version>2.2.0</version>
         <scope>compile</scope>
       </dependency>
 
       <dependency>
         <groupId>org.glite.authz</groupId>
         <artifactId>pep-java</artifactId>
-        <version>2.2.0</version>
+        <version>2.1.0</version>
         <scope>compile</scope>
       </dependency>
 
