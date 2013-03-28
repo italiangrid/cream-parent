@@ -79,6 +79,11 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       
+      <properties>
+        <tomcat.pkg.name>tomcat5</tomcat.pkg.name>
+        <tomcat.lib.dir>/var/lib/tomcat5/common/lib</tomcat.lib.dir>
+      </properties>
+      
       <dependencyManagement>
         <dependencies>
 
@@ -170,6 +175,11 @@
         <property><name>platform</name><value>sl5_x86_64</value></property>
       </activation>
 
+      <properties>
+        <tomcat.pkg.name>tomcat5</tomcat.pkg.name>
+        <tomcat.lib.dir>/var/lib/tomcat5/common/lib</tomcat.lib.dir>
+      </properties>
+      
       <dependencyManagement>
         <dependencies>
 
@@ -261,6 +271,11 @@
         <property><name>platform</name><value>sl6_x86_64</value></property>
       </activation>
 
+      <properties>
+        <tomcat.pkg.name>tomcat6</tomcat.pkg.name>
+        <tomcat.lib.dir>/usr/share/java/tomcat6</tomcat.lib.dir>
+      </properties>
+      
       <dependencyManagement>
         <dependencies>
 
