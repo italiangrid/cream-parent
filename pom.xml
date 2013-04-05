@@ -66,9 +66,6 @@
   
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     
-    <cream.wsdl.url>http://gimo2.pd.infn.it/WS/CREAM</cream.wsdl.url>
-    <es.wsdl.url>http://gimo2.pd.infn.it/WS/ES</es.wsdl.url>
-    
   </properties>
   
   <profiles>
