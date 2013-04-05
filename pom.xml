@@ -82,6 +82,8 @@
       <properties>
         <tomcat.pkg.name>tomcat5</tomcat.pkg.name>
         <tomcat.lib.dir>/var/lib/tomcat5/common/lib</tomcat.lib.dir>
+        <tomcat.servlet.groupid>tomcat</tomcat.servlet.groupid>
+        <tomcat.servlet.version>5.5.23</tomcat.servlet.version>
       </properties>
       
       <dependencyManagement>
@@ -95,9 +97,9 @@
           </dependency>
 
           <dependency>
-            <groupId>tomcat</groupId>
+            <groupId>${tomcat.servlet.groupid}</groupId>
             <artifactId>servlet-api</artifactId>
-            <version>5.5.23</version>
+            <version>${tomcat.servlet.version}</version>
             <scope>compile</scope>
           </dependency>
 
@@ -178,6 +180,8 @@
       <properties>
         <tomcat.pkg.name>tomcat5</tomcat.pkg.name>
         <tomcat.lib.dir>/var/lib/tomcat5/common/lib</tomcat.lib.dir>
+        <tomcat.servlet.groupid>tomcat</tomcat.servlet.groupid>
+        <tomcat.servlet.version>5.5.23</tomcat.servlet.version>
       </properties>
       
       <dependencyManagement>
@@ -191,9 +195,9 @@
           </dependency>
 
           <dependency>
-            <groupId>tomcat</groupId>
+            <groupId>${tomcat.servlet.groupid}</groupId>
             <artifactId>servlet-api</artifactId>
-            <version>5.5.23</version>
+            <version>${tomcat.servlet.version}</version>
             <scope>compile</scope>
           </dependency>
 
@@ -274,6 +278,8 @@
       <properties>
         <tomcat.pkg.name>tomcat6</tomcat.pkg.name>
         <tomcat.lib.dir>/usr/share/java/tomcat6</tomcat.lib.dir>
+        <tomcat.servlet.groupid>org.apache.tomcat</tomcat.servlet.groupid>
+        <tomcat.servlet.version>6.0.24</tomcat.servlet.version>
       </properties>
       
       <dependencyManagement>
@@ -287,9 +293,9 @@
           </dependency>
 
           <dependency>
-            <groupId>org.apache.tomcat</groupId>
+            <groupId>${tomcat.servlet.groupid}</groupId>
             <artifactId>servlet-api</artifactId>
-            <version>6.0.24</version>
+            <version>${tomcat.servlet.version}</version>
             <scope>compile</scope>
           </dependency>
 
