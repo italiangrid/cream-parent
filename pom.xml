@@ -4,7 +4,7 @@
 
   <groupId>org.glite</groupId>
   <artifactId>cream-parent</artifactId>
-  <version>0.1.0</version>
+  <version>0.8.0</version>
   <packaging>pom</packaging>
   
   <organization>
@@ -39,13 +39,6 @@
       </dependency>
 
       <dependency>
-        <groupId>org.glite.security</groupId>
-        <artifactId>delegation-java</artifactId>
-        <version>2.2.0</version>
-        <scope>compile</scope>
-      </dependency>
-
-      <dependency>
         <groupId>org.italiangrid</groupId>
         <artifactId>voms-api-java</artifactId>
         <version>2.0.10</version>
@@ -66,14 +59,19 @@
         <scope>compile</scope>
       </dependency>
 
+      <dependency>
+        <groupId>org.glite.security</groupId>
+        <artifactId>delegation-java</artifactId>
+        <version>2.2.0</version>
+        <scope>compile</scope>
+      </dependency>
+
     </dependencies>
   </dependencyManagement>
 
   <properties>
   
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    
-    <wsdls.path>https://ci-01.cnaf.infn.it/download/cream/cream-ce-wsdl</wsdls.path>
     
   </properties>
   
@@ -85,6 +83,13 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       
+      <properties>
+        <tomcat.pkg.name>tomcat5</tomcat.pkg.name>
+        <tomcat.lib.dir>/var/lib/tomcat5/common/lib</tomcat.lib.dir>
+        <tomcat.servlet.groupid>tomcat</tomcat.servlet.groupid>
+        <tomcat.servlet.version>5.5.23</tomcat.servlet.version>
+      </properties>
+
       <dependencyManagement>
         <dependencies>
 
@@ -96,9 +101,9 @@
           </dependency>
 
           <dependency>
-            <groupId>tomcat</groupId>
+            <groupId>${tomcat.servlet.groupid}</groupId>
             <artifactId>servlet-api</artifactId>
-            <version>5.5.23</version>
+            <version>${tomcat.servlet.version}</version>
             <scope>compile</scope>
           </dependency>
 
@@ -172,9 +177,13 @@
   
     <profile>
       <id>SL5_x86_64</id>
-      <activation>
-        <property><name>platform</name><value>sl5_x86_64</value></property>
-      </activation>
+
+      <properties>
+        <tomcat.pkg.name>tomcat5</tomcat.pkg.name>
+        <tomcat.lib.dir>/var/lib/tomcat5/common/lib</tomcat.lib.dir>
+        <tomcat.servlet.groupid>tomcat</tomcat.servlet.groupid>
+        <tomcat.servlet.version>5.5.23</tomcat.servlet.version>
+      </properties>
 
       <dependencyManagement>
         <dependencies>
@@ -187,9 +196,9 @@
           </dependency>
 
           <dependency>
-            <groupId>tomcat</groupId>
+            <groupId>${tomcat.servlet.groupid}</groupId>
             <artifactId>servlet-api</artifactId>
-            <version>5.5.23</version>
+            <version>${tomcat.servlet.version}</version>
             <scope>compile</scope>
           </dependency>
 
@@ -263,9 +272,13 @@
 
     <profile>
       <id>SL6_x86_64</id>
-      <activation>
-        <property><name>platform</name><value>sl6_x86_64</value></property>
-      </activation>
+
+      <properties>
+        <tomcat.pkg.name>tomcat6</tomcat.pkg.name>
+        <tomcat.lib.dir>/usr/share/java/tomcat6</tomcat.lib.dir>
+        <tomcat.servlet.groupid>org.apache.tomcat</tomcat.servlet.groupid>
+        <tomcat.servlet.version>6.0.24</tomcat.servlet.version>
+      </properties>
 
       <dependencyManagement>
         <dependencies>
@@ -278,9 +291,9 @@
           </dependency>
 
           <dependency>
-            <groupId>org.apache.tomcat</groupId>
+            <groupId>${tomcat.servlet.groupid}</groupId>
             <artifactId>servlet-api</artifactId>
-            <version>6.0.24</version>
+            <version>${tomcat.servlet.version}</version>
             <scope>compile</scope>
           </dependency>
 
