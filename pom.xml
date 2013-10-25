@@ -371,16 +371,48 @@
       </dependencyManagement>
 
     </profile>
+
+    <profile>
+      <id>internal_deploy</id>
+      
+      <activation>
+        <activeByDefault>false</activeByDefault>
+        <property>
+          <name>deploy.destination</name>
+          <value>pd_internal</value>
+        </property>
+      </activation>
+
+      <distributionManagement>
+        <repository>
+          <id>igi.website</id>
+          <name>IGI Website</name>
+          <url>${igi.repo.url}</url>
+        </repository>
+      </distributionManagement>
+    </profile>
     
+    <profile>
+      <id>testing_deploy</id>
+      
+      <activation>
+        <activeByDefault>false</activeByDefault>
+        <property>
+          <name>deploy.destination</name>
+          <value>nexus</value>
+        </property>
+      </activation>
+
+      <distributionManagement>
+        <repository>
+          <id>sonatype-nexus-staging</id>
+          <name>NEXUS RELEASES repo</name>
+          <url>${nexus.repo.url}</url>
+        </repository>
+      </distributionManagement>
+    </profile>
+
   </profiles>
   
   
-  <distributionManagement>
-    <repository>
-      <id>igi.website</id>
-      <name>IGI Website</name>
-      <url>${igi.repo.url}</url>
-    </repository>
-  </distributionManagement>
-
 </project>
