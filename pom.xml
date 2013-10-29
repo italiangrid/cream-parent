@@ -4,7 +4,7 @@
 
   <groupId>org.glite</groupId>
   <artifactId>cream-parent</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <packaging>pom</packaging>
   
   <organization>
@@ -73,121 +73,100 @@
         <scope>compile</scope>
       </dependency>
 
+      <dependency>
+        <groupId>org.apache.axis2</groupId>
+        <artifactId>axis2</artifactId>
+        <version>1.6.1</version>
+        <scope>compile</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.neethi</groupId>
+        <artifactId>neethi</artifactId>
+        <version>3.0.2</version>
+        <scope>compile</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.condor</groupId>
+        <artifactId>classad</artifactId>
+        <version>2.4</version>
+        <scope>compile</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.ws.commons.axiom</groupId>
+        <artifactId>axiom-api</artifactId>
+        <version>1.2.12</version>
+        <scope>compile</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.ws.commons.axiom</groupId>
+        <artifactId>axiom-impl</artifactId>
+        <version>1.2.12</version>
+        <scope>compile</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>wsdl4j</groupId>
+        <artifactId>wsdl4j</artifactId>
+        <version>1.6.2</version>
+        <scope>compile</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>3.8.2</version>
+        <scope>test</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>org.bouncycastle</groupId>
+        <artifactId>bcprov-jdk15</artifactId>
+        <version>1.46</version>
+        <scope>compile</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>${tomcat.servlet.groupid}</groupId>
+        <artifactId>servlet-api</artifactId>
+        <version>${tomcat.servlet.version}</version>
+        <scope>compile</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.16</version>
+        <scope>compile</scope>
+      </dependency>
+
+      <dependency>
+        <groupId>commons-httpclient</groupId>
+        <artifactId>commons-httpclient</artifactId>
+        <version>3.0</version>
+        <scope>compile</scope>
+      </dependency>
+
     </dependencies>
   </dependencyManagement>
 
   <properties>
   
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    
+    <tomcat.servlet.groupid>tomcat</tomcat.servlet.groupid>
+    <tomcat.servlet.version>5.5.23</tomcat.servlet.version>
+
   </properties>
   
   <profiles>
   
     <profile>
-      <id>default-profile</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      
-      <properties>
-        <tomcat.pkg.name>tomcat5</tomcat.pkg.name>
-        <tomcat.lib.dir>/var/lib/tomcat5/common/lib</tomcat.lib.dir>
-        <tomcat.servlet.groupid>tomcat</tomcat.servlet.groupid>
-        <tomcat.servlet.version>5.5.23</tomcat.servlet.version>
-      </properties>
-      
-      <dependencyManagement>
-        <dependencies>
-
-          <dependency>
-            <groupId>org.bouncycastle</groupId>
-            <artifactId>bcprov-jdk15</artifactId>
-            <version>1.46</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>${tomcat.servlet.groupid}</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>${tomcat.servlet.version}</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.16</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>org.apache.axis2</groupId>
-            <artifactId>axis2</artifactId>
-            <version>1.6.1</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>org.apache.neethi</groupId>
-            <artifactId>neethi</artifactId>
-            <version>3.0.2</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>org.condor</groupId>
-            <artifactId>classad</artifactId>
-            <version>2.4</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>org.apache.ws.commons.axiom</groupId>
-            <artifactId>axiom-api</artifactId>
-            <version>1.2.12</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>org.apache.ws.commons.axiom</groupId>
-            <artifactId>axiom-impl</artifactId>
-            <version>1.2.12</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>wsdl4j</groupId>
-            <artifactId>wsdl4j</artifactId>
-            <version>1.6.2</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>commons-httpclient</groupId>
-            <artifactId>commons-httpclient</artifactId>
-            <version>3.0</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.2</version>
-            <scope>test</scope>
-          </dependency>
-
-        </dependencies>
-      </dependencyManagement>
-      
-    </profile>
-  
-    <profile>
-      <id>SL5_x86_64</id>
+      <id>build_on_SL5</id>
 
       <properties>
-        <tomcat.pkg.name>tomcat5</tomcat.pkg.name>
-        <tomcat.lib.dir>/var/lib/tomcat5/common/lib</tomcat.lib.dir>
         <tomcat.servlet.groupid>tomcat</tomcat.servlet.groupid>
         <tomcat.servlet.version>5.5.23</tomcat.servlet.version>
       </properties>
@@ -217,59 +196,10 @@
           </dependency>
 
           <dependency>
-            <groupId>org.apache.axis2</groupId>
-            <artifactId>axis2</artifactId>
-            <version>1.6.1</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>org.apache.neethi</groupId>
-            <artifactId>neethi</artifactId>
-            <version>3.0.2</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>org.condor</groupId>
-            <artifactId>classad</artifactId>
-            <version>2.4</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>org.apache.ws.commons.axiom</groupId>
-            <artifactId>axiom-api</artifactId>
-            <version>1.2.12</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>org.apache.ws.commons.axiom</groupId>
-            <artifactId>axiom-impl</artifactId>
-            <version>1.2.12</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>wsdl4j</groupId>
-            <artifactId>wsdl4j</artifactId>
-            <version>1.6.2</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
             <groupId>commons-httpclient</groupId>
             <artifactId>commons-httpclient</artifactId>
             <version>3.0</version>
             <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.2</version>
-            <scope>test</scope>
           </dependency>
 
         </dependencies>
@@ -278,11 +208,9 @@
     </profile>
 
     <profile>
-      <id>SL6_x86_64</id>
+      <id>build_on_SL6</id>
 
       <properties>
-        <tomcat.pkg.name>tomcat6</tomcat.pkg.name>
-        <tomcat.lib.dir>/usr/share/java/tomcat6</tomcat.lib.dir>
         <tomcat.servlet.groupid>org.apache.tomcat</tomcat.servlet.groupid>
         <tomcat.servlet.version>6.0.24</tomcat.servlet.version>
       </properties>
@@ -312,59 +240,10 @@
           </dependency>
 
           <dependency>
-            <groupId>org.apache.axis2</groupId>
-            <artifactId>axis2</artifactId>
-            <version>1.6.1</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>org.apache.neethi</groupId>
-            <artifactId>neethi</artifactId>
-            <version>3.0.2</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>org.condor</groupId>
-            <artifactId>classad</artifactId>
-            <version>2.4</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>org.apache.ws.commons.axiom</groupId>
-            <artifactId>axiom-api</artifactId>
-            <version>1.2.12</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>org.apache.ws.commons.axiom</groupId>
-            <artifactId>axiom-impl</artifactId>
-            <version>1.2.12</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>wsdl4j</groupId>
-            <artifactId>wsdl4j</artifactId>
-            <version>1.6.2</version>
-            <scope>compile</scope>
-          </dependency>
-
-          <dependency>
             <groupId>commons-httpclient</groupId>
             <artifactId>commons-httpclient</artifactId>
             <version>3.1</version>
             <scope>compile</scope>
-          </dependency>
-
-          <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.2</version>
-            <scope>test</scope>
           </dependency>
 
         </dependencies>
@@ -373,27 +252,7 @@
     </profile>
 
     <profile>
-      <id>internal_deploy</id>
-      
-      <activation>
-        <activeByDefault>false</activeByDefault>
-        <property>
-          <name>deploy.destination</name>
-          <value>pd_internal</value>
-        </property>
-      </activation>
-
-      <distributionManagement>
-        <repository>
-          <id>igi.website</id>
-          <name>IGI Website</name>
-          <url>${igi.repo.url}</url>
-        </repository>
-      </distributionManagement>
-    </profile>
-    
-    <profile>
-      <id>testing_deploy</id>
+      <id>nexus_deploy</id>
       
       <activation>
         <activeByDefault>false</activeByDefault>
