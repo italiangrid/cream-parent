@@ -4,7 +4,7 @@
 
   <groupId>org.glite</groupId>
   <artifactId>cream-parent</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.2-SNAPSHOT</version>
   <packaging>pom</packaging>
   
   <organization>
@@ -257,17 +257,21 @@
       <activation>
         <activeByDefault>false</activeByDefault>
         <property>
-          <name>deploy.destination</name>
-          <value>nexus</value>
+          <name>nexus.repo.url</name>
         </property>
       </activation>
 
       <distributionManagement>
         <repository>
           <id>sonatype-nexus-staging</id>
-          <name>NEXUS RELEASES repo</name>
-          <url>${nexus.repo.url}</url>
+          <name>Nexus releases repository</name>
+          <url>${nexus.repo.url}/releases</url>
         </repository>
+        <snapshotRepository>
+          <id>sonatype-nexus-staging</id>
+          <name>Nexus snapshots repository</name>
+          <url>${nexus.repo.url}/snapshots</url>
+        </snapshotRepository>
       </distributionManagement>
     </profile>
 
