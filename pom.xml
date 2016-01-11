@@ -163,6 +163,8 @@
     <bcprov.version>1.46</bcprov.version>
     -->
 
+    <cream.wsdl.url>http://italiangrid.github.io/cream-interface/WS/CREAM</cream.wsdl.url>
+    <es.wsdl.url>http://italiangrid.github.io/cream-interface/WS/ES</es.wsdl.url>
   </properties>
   
   <profiles>
