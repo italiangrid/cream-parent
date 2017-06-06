@@ -203,5 +203,12 @@
 
   </profiles>
   
-  
+  <repositories>
+    <repository>
+      <id>internalrepo</id>
+      <name>Internal Repository</name>
+      <url>http://igi-01.pd.infn.it/mrepo/grid-dev/maven</url>
+    </repository>
+  </repositories>
+
 </project>
