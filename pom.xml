@@ -210,30 +210,14 @@
       <url>http://igi-01.pd.infn.it/mrepo/grid-dev/maven</url>
     </repository>
     <repository>
-      <id>switch</id>
-      <name>SWITCH Releases</name>
-      <url>http://www.switch.ch/grid/authz/docs/maven2/release</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
+      <id>cnaf-releases</id>
+      <name>CNAF releases</name>
+      <url>http://radiohead.cnaf.infn.it:8081/nexus/content/repositories/cnaf-releases/</url>
+    </repository>    
     <repository>
       <id>internet2</id>
       <name>Internet2 Releases</name>
       <url>https://build.shibboleth.net/nexus/content/repositories/releases</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>herasaf</id>
-      <name>HERAS-AF Repository</name>
-      <url>http://maven.herasaf.org/repo</url>
-    </repository>
-    <repository>
-      <id>central-uk</id>
-      <name>Maven Repository Mirror</name>
-      <url>http://uk.maven.org/maven2</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
