@@ -4,7 +4,7 @@
 
   <groupId>org.glite</groupId>
   <artifactId>cream-parent</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>pom</packaging>
   
   <organization>
@@ -27,7 +27,7 @@
       <dependency>
         <groupId>eu.eu-emi.security</groupId>
         <artifactId>canl</artifactId>
-        <version>2.1.2</version>
+        <version>2.5.0</version>
         <scope>compile</scope>
       </dependency>
 
@@ -41,7 +41,7 @@
       <dependency>
         <groupId>org.italiangrid</groupId>
         <artifactId>voms-api-java</artifactId>
-        <version>3.1.0</version>
+        <version>3.3.0</version>
         <scope>compile</scope>
       </dependency>
 
@@ -132,14 +132,14 @@
       <dependency>
         <groupId>org.bouncycastle</groupId>
         <artifactId>bcprov-jdk15on</artifactId>
-        <version>1.50</version>
+        <version>1.58</version>
         <scope>compile</scope>
       </dependency>
 
       <dependency>
         <groupId>org.bouncycastle</groupId>
         <artifactId>bcpkix-jdk15on</artifactId>
-        <version>1.50</version>
+        <version>1.58</version>
         <scope>compile</scope>
       </dependency>
 
